@@ -13,13 +13,13 @@ public class Main {
         int[] count = new int[range];
 
         for (int i = 0; i < array.length; i++) {
-            count[array[i]]++;
+            count[array[i] - from]++;
         }
 
         int arrayIndex = 0;
         for (int i = 0; i < count.length; i++) {
             for (int j = 0; j < count[i]; j++) {
-                array[arrayIndex] = i;
+                array[arrayIndex] = i + from;
                 arrayIndex++;
             }
         }
@@ -98,7 +98,7 @@ public class Main {
         System.out.println(Arrays.toString(array));
         System.out.println();
 
-        System.out.printf("Виберіть спосіб сортування:%n1. Бульбашкове%n2. Вставкою%n3. Вибіркою");
+        System.out.printf("Виберіть спосіб сортування:%n1. Бульбашкове%n2. Вставкою%n3. Вибіркою%n4. Підрахунком");
         System.out.println();
         int choice = scanner.nextInt();
 
@@ -115,6 +115,7 @@ public class Main {
                 break;
             case 4:
                 countSort(array, from, to);
+                break;
             default:
                 System.out.println("Такого варіанту немає!!!");
                 return;
