@@ -1,4 +1,3 @@
-package shomin.algoritm.practice.pr19.pr20.pr22;
 
 import java.time.Duration;
 import java.time.LocalTime;
